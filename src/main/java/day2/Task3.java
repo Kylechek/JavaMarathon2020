@@ -8,10 +8,12 @@ public class Task3 {
         int a = sc.nextInt();
         int b = sc.nextInt();
         while (a <= b) {
-            if (a % 5 == 0 && a % 10 != 0) {
+            a++;
+            if (a >= b) {
+                System.out.println("Некорректный ввод");
+            } else if (a % 5 == 0 && a % 10 != 0) {
                 System.out.print(a + " ");
             }
-            a++;
         }
     }
 }
