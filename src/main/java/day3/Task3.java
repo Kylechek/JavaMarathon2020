@@ -9,11 +9,11 @@ public class Task3 {
         for (int i = 0; i < 5; i++) {
             double numberOne = sc.nextDouble();
             double numberTwo = sc.nextDouble();
-            double result = numberOne / numberTwo;
             if (numberTwo == 0) {
                 System.out.println("Деление на 0");
                 continue;
             }
+            double result = numberOne / numberTwo;
             System.out.println(result);
         }
     }

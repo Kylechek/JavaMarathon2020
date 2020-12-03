@@ -9,10 +9,10 @@ public class Task2 {
         while (true) {
             double numberOne = sc.nextDouble();
             double numberTwo = sc.nextDouble();
-            double result = numberOne / numberTwo;
             if (numberTwo == 0) {
                 break;
             }
+            double result = numberOne / numberTwo;
             System.out.println(result);
         }
     }
