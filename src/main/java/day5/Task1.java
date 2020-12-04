@@ -11,32 +11,32 @@ public class Task1 {
     }
 
     static class Car {
-        private int StartYear;
-        private String Color;
-        private String Model;
+        private int startYear;
+        private String color;
+        private String model;
 
         public void setStartYear(int startYear) {
-            StartYear = startYear;
+            this.startYear = startYear;
         }
 
         public void setColor(String color) {
-            Color = color;
+            this.color = color;
         }
 
         public void setModel(String model) {
-            Model = model;
+            this.model = model;
         }
 
         public int getStartYear() {
-            return StartYear;
+            return startYear;
         }
 
         public String getColor() {
-            return Color;
+            return color;
         }
 
         public String getModel() {
-            return Model;
+            return model;
         }
     }
 }
