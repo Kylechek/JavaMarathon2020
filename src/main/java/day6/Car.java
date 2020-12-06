@@ -27,7 +27,10 @@ public class Car {
             return "Это автомобиль";
         }
 
-    public int yearDifference(int year) {
-        return year - getStartYear();
+    public String yearDifference(int year) {
+        if (year > startYear) {
+            return String.valueOf(year - startYear);
+        }
+        return "year error";
     }
 }

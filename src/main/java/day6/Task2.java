@@ -10,6 +10,7 @@ public class Task2 {
         System.out.println(airplane.info());
 
     }
+
     static class Airplane {
         private String producer;
         private int year;
@@ -22,7 +23,7 @@ public class Task2 {
             this.year = year;
             this.length = length;
             this.weight = weight;
-            fuel = 0;
+            setFuel(0);
         }
 
         public void setYear(int year) {
@@ -42,11 +43,14 @@ public class Task2 {
         }
 
         public String info() {
-            return "Изготовитель: " + producer+", год выпуска: " + year + ", длина: " + length +", вес: " + weight
+            return "Изготовитель: " + producer + ", год выпуска: " + year + ", длина: " + length + ", вес: " + weight
                     + " , количество топлива в баке: " + getFuel();
         }
+
         public void fillUp(int fuel) {
-            setFuel(fuel);
+            for (int i = 0; i <= fuel; i++) {
+                setFuel(i++);
+            }
         }
     }
 }

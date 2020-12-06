@@ -7,7 +7,7 @@ public class Task3 {
     }
 
     static class Teacher {
-       private final String name;
+        private final String name;
         private final String subject;
 
         public Teacher(String name, String subject) {
@@ -16,8 +16,18 @@ public class Task3 {
         }
 
         public void evaluate(Student student) {
+            String grade = null;
             int number = (int) (2 + Math.random() * 5);
-            System.out.println("Преподаватель " + name+" оценил студента с именем "+ student.name + " по предмету " + subject + " на оценку " + number);
+            if (number == 2) {
+                grade = "неудовлетворительно";
+            } else if (number == 3) {
+                grade = "удовлетворительно";
+            } else if (number == 4) {
+                grade = "хорошо";
+            } else if (number == 5) {
+                grade = "отлично";
+            }
+            System.out.println("Преподаватель " + name + " оценил студента с именем " + student.name + " по предмету " + subject + " на оценку " + grade);
         }
     }
 

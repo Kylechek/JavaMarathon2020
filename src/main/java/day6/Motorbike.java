@@ -28,7 +28,11 @@ public class Motorbike {
         return "Это мотоцикл";
     }
 
-    public int yearDifference(int year) {
-        return year - startYear;
+    public String yearDifference(int year) {
+        if (year > startYear) {
+            return String.valueOf(year - startYear);
+        }
+        return "year error";
+
     }
 }
