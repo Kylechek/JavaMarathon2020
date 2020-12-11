@@ -1,12 +1,10 @@
 package day11.task1;
 
-import java.awt.event.WindowAdapter;
-
 public class Courier implements Worker {
     private int salary;
+    private int count;
     private boolean isPayed;
-    private int count = 0;
-    Warehouse w = new Warehouse();
+    private final Warehouse w;
 
     public Courier(Warehouse w) {
         this.w = w;
@@ -24,14 +22,14 @@ public class Courier implements Worker {
     public String toString() {
         return "Courier: " +
                 "salary=" + getSalary() +
-                ", count=" + count;
+                ", count= " + count;
     }
 
     @Override
     public void doWork() {
-        salary += +100;
+        salary += 100;
         count++;
-        w.setCountDeliveredOrders(count);
+        w.setCountDeliveredOrders(+1);
     }
 
     @Override

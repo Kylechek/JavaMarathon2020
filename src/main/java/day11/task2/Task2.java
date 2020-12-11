@@ -2,10 +2,10 @@ package day11.task2;
 
 public class Task2 {
     public static void main(String[] args) {
-        Warrior warrior = new Warrior(30, 0.8);
-        Paladin paladin = new Paladin(15, 0.5, 0.2, 25, 10);
-        Magician magician = new Magician(5, 20, 0.8);
-        Shaman shaman = new Shaman(10, 15, 0.2, 0.2, 50, 30);
+        Warrior warrior = new Warrior();
+        Paladin paladin = new Paladin();
+        Magician magician = new Magician();
+        Shaman shaman = new Shaman();
 
         warrior.physicalAttack(paladin);
         System.out.println(paladin.getHealth());
@@ -19,6 +19,7 @@ public class Task2 {
         System.out.println(warrior.getHealth());
         paladin.healHimself();
         System.out.println(paladin.getHealth());
+
 
         for (int i = 0; i < 5; i++) {
             warrior.physicalAttack(magician);

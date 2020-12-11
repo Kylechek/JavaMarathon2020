@@ -1,13 +1,16 @@
 package day11.task2;
 
 public class Paladin extends Hero implements PhysAttack, Healer {
+    private final double healHimself;
+    private final double healTeammate;
+    public int physAtt;
 
-    public Paladin(int physAtt, double physDef, double magicDef, double healHimself, double healTeammate) {
-        this.physAtt = physAtt;
-        this.physDef = physDef;
-        this.magicDef = magicDef;
-        this.healHimself = healHimself;
-        this.healTeammate = healTeammate;
+    public Paladin() {
+        this.physAtt = 15;
+        this.physDef = 0.5;
+        this.magicDef = 0.2;
+        this.healHimself = 25;
+        this.healTeammate = 10;
     }
 
     @Override

@@ -5,12 +5,15 @@ public class Task1 {
         Warehouse wh1 = new Warehouse();
         Warehouse wh2 = new Warehouse();
         Picker pickerOne = new Picker(wh1);
+        Picker pickerThree = new Picker(wh1);
         Picker pickerTwo = new Picker(wh2);
         Courier courierOne = new Courier(wh1);
         Courier courierTwo = new Courier(wh2);
+        Courier courierTree = new Courier(wh1);
 
         businessProcess(pickerOne);
         businessProcess(courierOne);
+        businessProcess(courierTree);
 
         pickerTwo.doWork();
         courierTwo.doWork();

@@ -2,12 +2,9 @@ package day11.task2;
 
 public abstract class Hero {
     private double health;
-    public double healHimself;
-    public double healTeammate;
-    public int physAtt;
-    public int magicAtt;
-    public double physDef;
+    public  double physDef;
     public double magicDef;
+    public int physAtt;
 
     public Hero() {
         health = 100;
@@ -15,6 +12,10 @@ public abstract class Hero {
 
     public double getHealth() {
         return health;
+    }
+
+    public void physicalAttack(Hero hero) {
+        hero.setAttHealth(physAtt * (1 - hero.physDef));
     }
 
     public void setAttHealth(double health) {

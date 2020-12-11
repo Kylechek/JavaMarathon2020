@@ -1,6 +1,6 @@
 package day11.task1;
 
-public class Warehouse{
+public class Warehouse {
     private int countPickedOrders;
     private int countDeliveredOrders;
 
@@ -9,11 +9,15 @@ public class Warehouse{
     }
 
     public void setCountPickedOrders(int countPickedOrders) {
-        this.countPickedOrders = countPickedOrders;
+        for (int i = 0; i < countPickedOrders; i++) {
+            this.countPickedOrders++;
+        }
     }
 
     public void setCountDeliveredOrders(int countDeliveredOrders) {
-        this.countDeliveredOrders = countDeliveredOrders;
+        for (int i = 0; i < countDeliveredOrders; i++) {
+            this.countDeliveredOrders++;
+        }
     }
 
     public int getCountPickedOrders() {
@@ -28,6 +32,6 @@ public class Warehouse{
     public String toString() {
         return "Warehouse: " +
                 "Picked orders= " + countPickedOrders +
-                ", Delivered orders= " +  countDeliveredOrders;
+                ", Delivered orders= " + countDeliveredOrders;
     }
 }
